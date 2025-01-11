@@ -9,12 +9,84 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div class="popup" id="loginpop">
+        <div class="popup-content">
+          <div class="namex">
+            <h3>LOGIN</h3>
+            <a href="#" class="close-icon" id="closed"><i class="fa-solid fa-xmark"></i></a>
+          </div>
+          <div class="social-login">
+            <button class="facebook-btn">
+              <i class="fa-brands fa-facebook-f"></i> Continue with Facebook
+            </button>
+          </div>
+          <p class="divider">or</p>
+          <div>
+            <input type="email" id="email" placeholder="E-Mail" />
+            <p class="error-message" id="email-error">Email is incorrect</p>
+          </div>
+          <div class="password-container">
+            <input type="password" id="password" placeholder="Password" />
+            <span class="toggle-password" id="toggle-password">
+              <i class="fa-solid fa-eye"></i>
+            </span>
+            <p class="error-message" id="password-error">Password must be at least 8 characters</p>
+          </div>
+          <button class="login-btn" id="login-btn">LOGIN</button>
+          <p class="no-username">
+            Don't have a username? <button class="register-link" id="reglink">Register</button>
+          </p>
+        </div>
+    </div>
+    <div class="popup" id="register-popup">
+        <div class="popup-content">
+          <div class="namex">
+            <h3>REGISTER</h3>
+            <a href="#" id="register-close"><i class="fa-solid fa-xmark"></i></a>
+          </div>
+          <div>
+            <input type="email" id="register-email" placeholder="E-Mail">
+            <p class="error-message" id="register-email-error">Email must contain "@" and at least 2 characters after it.</p>
+          </div>
+          <div class="password-container">
+            <input type="password" id="register-password" placeholder="Password">
+            <p class="error-message" id="register-password-error">Password must be at least 8 characters long.</p>
+            <p class="password-strength" id="password-strength"></p>
+          </div>
+          <div class="password-container">
+            <input type="password" id="confirm-password" placeholder="Confirm Password">
+            <p class="error-message" id="confirm-password-error">Passwords do not match.</p>
+          </div>
+          <div>
+            <input type="text" id="user-name" placeholder="User Name">
+          </div>
+          <div>
+            <input type="text" id="country" placeholder="Country">
+          </div>
+          <div>
+            <input type="text" id="city" placeholder="City">
+          </div>
+          <div>
+            <input type="text" id="mobile" placeholder="Mobile Number">
+            <p class="error-message" id="mobile-error">Mobile number must contain only digits.</p>
+          </div>
+          <div>
+            <input type="date" id="registration-date">
+          </div>
+          <button class="login-btn" id="register-btn">REGISTER</button>
+        </div>
+    </div>
+      
+      
+      
+        
     <div class="container">
+        
         <header>
             <div class="top-nav">
                 <div class="left-section">
                     <div class="logo">
-                        <img src="https://tkt.ge/static/brand/logo.svg" alt="Logo">
+                        <a href="/main/main.html"><img src="https://tkt.ge/static/brand/logo.svg" alt="Logo"> </a>
                     </div>
                     <div class="search-bar">
                         <input type="text" placeholder="Search...">
@@ -42,12 +114,13 @@
                         <a href="#">Theater</a>
                     </div>
                 </div>
-                <button><i class="fa-solid fa-ticket-simple"></i>Movies</button>
-                <button><i class="fa-solid fa-music"></i>Music/Concerts</button>
+                <button><i class="fa-solid fa-ticket-simple"></i><a href="/about/about.html">about</a></button>
+                <button><i class="fa-solid fa-music"></i><a href="/contact/contact.html">contact</a></button>
                 <button><i class="fa-solid fa-train"></i>Railway</button>
                 <button><i class="fa-solid fa-masks-theater"></i>Theater</button>
             </div>
         </header>
+
         
 
         <div class="slider">
@@ -369,7 +442,7 @@
             </div>
         </div>
     </footer>
-    </div>
+</div>
 
     <script src="main.js"></script>
 </body>

@@ -1,0 +1,108 @@
+.hero {
+    background: url('https://static.tkt.ge/img/meta-background.png') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.content-container {
+    margin: 20px;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.mission, .vision {
+    width: 45%;
+}
+
+.highlights {
+    background: #007bff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.highlights .highlight-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.highlight-cards .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+}
+
+.card i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.team {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    width: 150px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .about-flex img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+}

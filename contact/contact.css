@@ -1,0 +1,123 @@
+
+
+.hero {
+    background: url('https://static.tkt.ge/img/meta-background.png') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.content-container {
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-info ul li i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact-form {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}

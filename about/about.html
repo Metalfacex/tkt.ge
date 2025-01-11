@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKT.ge Inspired Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/main/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup" id="loginpop">
+        <div class="popup-content">
+          <div class="namex">
+            <h3>LOGIN</h3>
+            <a href="#" class="close-icon" id="closed"><i class="fa-solid fa-xmark"></i></a>
+          </div>
+          <div class="social-login">
+            <button class="facebook-btn">
+              <i class="fa-brands fa-facebook-f"></i> Continue with Facebook
+            </button>
+          </div>
+          <p class="divider">or</p>
+          <div>
+            <input type="email" id="email" placeholder="E-Mail" />
+            <p class="error-message" id="email-error">Email is incorrect</p>
+          </div>
+          <div class="password-container">
+            <input type="password" id="password" placeholder="Password" />
+            <span class="toggle-password" id="toggle-password">
+              <i class="fa-solid fa-eye"></i>
+            </span>
+            <p class="error-message" id="password-error">Password must be at least 8 characters</p>
+          </div>
+          <button class="login-btn" id="login-btn">LOGIN</button>
+          <p class="no-username">
+            Don't have a username? <button class="register-link" id="reglink">Register</button>
+          </p>
+        </div>
+    </div>
+    <div class="popup" id="register-popup">
+        <div class="popup-content">
+          <div class="namex">
+            <h3>REGISTER</h3>
+            <a href="#" id="register-close"><i class="fa-solid fa-xmark"></i></a>
+          </div>
+          <div>
+            <input type="email" id="register-email" placeholder="E-Mail">
+            <p class="error-message" id="register-email-error">Email must contain "@" and at least 2 characters after it.</p>
+          </div>
+          <div class="password-container">
+            <input type="password" id="register-password" placeholder="Password">
+            <p class="error-message" id="register-password-error">Password must be at least 8 characters long.</p>
+            <p class="password-strength" id="password-strength"></p>
+          </div>
+          <div class="password-container">
+            <input type="password" id="confirm-password" placeholder="Confirm Password">
+            <p class="error-message" id="confirm-password-error">Passwords do not match.</p>
+          </div>
+          <div>
+            <input type="text" id="user-name" placeholder="User Name">
+          </div>
+          <div>
+            <input type="text" id="country" placeholder="Country">
+          </div>
+          <div>
+            <input type="text" id="city" placeholder="City">
+          </div>
+          <div>
+            <input type="text" id="mobile" placeholder="Mobile Number">
+            <p class="error-message" id="mobile-error">Mobile number must contain only digits.</p>
+          </div>
+          <div>
+            <input type="date" id="registration-date">
+          </div>
+          <button class="login-btn" id="register-btn">REGISTER</button>
+        </div>
+    </div>
+      
+      
+      
+        
+    <div class="container">
+        
+        <header>
+            <div class="top-nav">
+                <div class="left-section">
+                    <div class="logo">
+                        <a href="/main/main.html"><img src="https://tkt.ge/static/brand/logo.svg" alt="Logo"> </a>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="right-section buttons">
+                    <button id="login-button"><i class="fas fa-user"></i> Login</button>
+                    <div class="dropdown">
+                        <button><i class="fas fa-globe"></i> EN</button>
+                        <div class="dropdown-menu">
+                            <button>EN</button>
+                            <button>KA</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="category-buttons">
+                <div class="dropdown">
+                    <button><i class="fa-solid fa-icons"></i>Category</button>
+                    <div class="dropdown-menu">
+                        <a href="#">Movies</a>
+                        <a href="#">Music/Concerts</a>
+                        <a href="#">Railway</a>
+                        <a href="#">Theater</a>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-ticket-simple"></i><a href="/about/about.html">about</a></button>
+                <button><i class="fa-solid fa-music"></i><a href="/contact/contact.html">contact</a></button>
+                <button><i class="fa-solid fa-train"></i>Railway</button>
+                <button><i class="fa-solid fa-masks-theater"></i>Theater</button>
+            </div>
+        </header>
+        <div class="hero">
+            <h1>About Us</h1>
+            <p>Connecting You to the Best Events, Entertainment, and Experiences in Georgia.</p>
+        </div>
+    
+        <div class="content-container">
+            <div class="mission-vision">
+                <div class="mission">
+                    <h2>Our Mission</h2>
+                    <p>At TKT, we strive to provide an all-in-one platform for discovering, booking, and enjoying events across Georgia. Our mission is to make event access seamless and enjoyable for everyone.</p>
+                </div>
+                <div class="vision">
+                    <h2>Our Vision</h2>
+                    <p>We envision a world where everyone can easily connect with culture, entertainment, and experiences that inspire them. By simplifying event management and ticketing, we aim to build a vibrant community of event-goers and organizers.</p>
+                </div>
+            </div>
+    
+            <div class="highlights">
+                <h2>What We Offer</h2>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <i class="fa-solid fa-ticket"></i>
+                        <h3>Event Ticketing</h3>
+                        <p>Book tickets for concerts, sports, theater, movies, and more with ease.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-masks-theater"></i>
+                        <h3>Entertainment</h3>
+                        <p>Discover the latest in arts, festivals, and live performances happening near you.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-train"></i>
+                        <h3>Transportation</h3>
+                        <p>Plan your travels with railway tickets and seamless connectivity.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-plane"></i>
+                        <h3>Travel & Tourism</h3>
+                        <p>Explore tours and destinations with our trusted partners.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="team">
+                <h2>Meet Our Team</h2>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsfsco.net%2Fwp-content%2Fuploads%2F2016%2F04%2F6140989632_1c8066563d_b.jpg&f=1&nofb=1&ipt=f6ca26078c129c74457e772b6b01b34833871b27c47f0ef962fc134edd8479e6&ipo=images" alt="Team Member">
+                        <h3>John Doe</h3>
+                        <p>CEO & Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F024%2F354%2F297%2Fnon_2x%2Fbusiness-woman-isolated-illustration-ai-generative-free-photo.jpg&f=1&nofb=1&ipt=782263447a0e501e608f915f3be79018b4ae1b770c3f4732ae9b7041668ac674&ipo=images" alt="Team Member">
+                        <h3>Jane Smith</h3>
+                        <p>Head of Marketing</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fportrait-of-a-businessman-picture-id619636712%3Fk%3D20%26m%3D619636712%26s%3D612x612%26w%3D0%26h%3Djyft54gZfN743cIHa-kQdzAc7zvH6ymEp72URTCnn1A%3D&f=1&nofb=1&ipt=ec47b482ac74aff33ce390d37db33a2e50969e7f22c2669e0155df482fb1c896&ipo=images" alt="Team Member">
+                        <h3>Mike Brown</h3>
+                        <p>Technical Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <li>Music / Concert</li>
+                        <li>Theatre</li>
+                        <li>Opera</li>
+                        <li>Sport</li>
+                        <li>International</li>
+                        <li>Omnibus</li>
+                        <li>Festival</li>
+                        <li>Kids</li>
+                        <li>Conference</li>
+                        <li>Stand Up</li>
+                        <li>Tourism</li>
+                        <li>Hobby</li>
+                        <li>Masterclass</li>
+                        <li>Museum</li>
+                        <li>Sea</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li>Online Help</li>
+                        <li>Anonymous Hotline</li>
+                        <li>Feedback</li>
+                        <li>For Organizations</li>
+                        <li>FAQ</li>
+                        <li>+995 32 2195577</li>
+                        <li>support@tkt.ge</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>MOVIES</h4>
+                    <ul>
+                        <li>Amirani Cinema</li>
+                        <li>Cavea Grand Mall Batumi</li>
+                        <li>Cavea Tbilisi Mall</li>
+                        <li>Cavea East Point</li>
+                        <li>Cavea Galleria</li>
+                        <li>Cavea City Mall</li>
+                        <li>Iveria Khashuri</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>RAILWAY</h4>
+                    <ul>
+                        <li>Tbilisi - Batumi</li>
+                        <li>Tbilisi - Poti</li>
+                        <li>Tbilisi - Kutaisi</li>
+                        <li>Tbilisi - Ureki</li>
+                        <li>Tbilisi - Ozurgeti</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FLY</h4>
+                    <ul>
+                        <li>Airlines</li>
+                        <li>Tbilisi - Istanbul</li>
+                        <li>Tbilisi - Berlin</li>
+                        <li>Tbilisi - Paris</li>
+                        <li>Tbilisi - Barcelona</li>
+                        <li>Tbilisi - Baku</li>
+                        <li>Explanatory Dictionary</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Environmental Policy</a>
+                    <a href="#">TKT Club Membership</a>
+                </div>
+                <div class="partners">
+                    <img src="tnet-logo.png" alt="TNET">
+                    <img src="myauto-logo.png" alt="MyAuto">
+                    <img src="myparts-logo.png" alt="MyParts">
+                    <img src="myhome-logo.png" alt="MyHome">
+                    <img src="mymarket-logo.png" alt="MyMarket">
+                    <img src="myjobs-logo.png" alt="MyJobs">
+                    <img src="superapp-logo.png" alt="SuperApp">
+                    <img src="vendoo-logo.png" alt="Vendoo">
+                    <img src="tkt-logo.png" alt="TKT">
+                    <img src="swoop-logo.png" alt="Swoop">
+                    <img src="livo-logo.png" alt="Livo">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/main/main.js"></script>
+</body>
+

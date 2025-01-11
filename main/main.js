@@ -1,7 +1,186 @@
+// login
+const emailInput = document.getElementById("email");
+const emailError = document.getElementById("email-error");
+const passwordInput = document.getElementById("password");
+const passwordError = document.getElementById("password-error");
+const togglePassword = document.getElementById("toggle-password");
+const loginButton = document.getElementById("login-btn");
+
+// Email validation
+emailInput.addEventListener("input", () => {
+  const emailValue = emailInput.value;
+  if (!emailValue.includes("@")) {
+    emailInput.classList.add("error");
+    emailError.style.display = "block";
+  } else {
+    emailInput.classList.remove("error");
+    emailError.style.display = "none";
+  }
+});
+
+// Password validation
+passwordInput.addEventListener("input", () => {
+  const passwordValue = passwordInput.value;
+  if (passwordValue.length < 8) {
+    passwordInput.classList.add("error");
+    passwordError.style.display = "block";
+  } else {
+    passwordInput.classList.remove("error");
+    passwordError.style.display = "none";
+  }
+});
+
+// Toggle password visibility
+togglePassword.addEventListener("click", () => {
+  const icon = togglePassword.querySelector("i");
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
+  }
+});
+
+// Login button validation
+loginButton.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent form submission (if inside a form)
+  const emailValue = emailInput.value;
+  const passwordValue = passwordInput.value;
+
+  if (!emailValue.includes("@")) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  if (passwordValue.length < 8) {
+    alert("Password must be at least 8 characters long.");
+    return;
+  }
+
+  // If both validations pass
+  alert("Logged in");
+});
+document.getElementById("register-password").addEventListener("input", function () {
+    const password = this.value;
+    const passwordStrength = document.getElementById("password-strength");
+  
+    if (!password) {
+      // Empty password case
+      passwordStrength.textContent = "";
+      passwordStrength.className = "password-strength";
+    } else if (/^[a-zA-Z]+$/.test(password)) {
+      // Weak: Only English letters (no numbers, special characters)
+      passwordStrength.textContent = "Weak: Only English characters.";
+      passwordStrength.className = "password-strength weak";
+    } else if (/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$/.test(password) && !/[A-Z]/.test(password)) {
+      // Medium: Contains English letters and numbers, but no uppercase
+      passwordStrength.textContent = "Medium: English characters and numbers.";
+      passwordStrength.className = "password-strength medium";
+    } else if (
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]+$/.test(password)
+    ) {
+      // Strong: Contains uppercase, lowercase English letters, and numbers
+      passwordStrength.textContent = "Strong: Uppercase, lowercase, and numbers.";
+      passwordStrength.className = "password-strength strong";
+    } else {
+      // Default case for unexpected inputs
+      passwordStrength.textContent = "Weak: Invalid combination.";
+      passwordStrength.className = "password-strength weak";
+    }
+  });
+  
+  document.getElementById("register-btn").addEventListener("click", function (event) {
+    event.preventDefault();
+  
+    const emailInput = document.getElementById("register-email");
+    const emailError = document.getElementById("register-email-error");
+    const passwordInput = document.getElementById("register-password");
+    const passwordError = document.getElementById("register-password-error");
+    const confirmPasswordInput = document.getElementById("confirm-password");
+    const confirmPasswordError = document.getElementById("confirm-password-error");
+    const mobileInput = document.getElementById("mobile");
+    const mobileError = document.getElementById("mobile-error");
+  
+    let valid = true;
+  
+    // Email validation
+    const emailValue = emailInput.value;
+    if (!emailValue.includes("@") || emailValue.split("@")[1].length < 2) {
+      emailError.style.display = "block";
+      emailInput.classList.add("error");
+      valid = false;
+    } else {
+      emailError.style.display = "none";
+      emailInput.classList.remove("error");
+    }
+  
+    // Password validation
+    const passwordValue = passwordInput.value;
+    if (passwordValue.length < 8) {
+      passwordError.style.display = "block";
+      passwordInput.classList.add("error");
+      valid = false;
+    } else {
+      passwordError.style.display = "none";
+      passwordInput.classList.remove("error");
+    }
+  
+    // Confirm password validation
+    const confirmPasswordValue = confirmPasswordInput.value;
+    if (passwordValue !== confirmPasswordValue) {
+      confirmPasswordError.style.display = "block";
+      confirmPasswordInput.classList.add("error");
+      valid = false;
+    } else {
+      confirmPasswordError.style.display = "none";
+      confirmPasswordInput.classList.remove("error");
+    }
+  
+    // Mobile number validation
+    const mobileValue = mobileInput.value;
+    if (!/^\d+$/.test(mobileValue)) {
+      mobileError.style.display = "block";
+      mobileInput.classList.add("error");
+      valid = false;
+    } else {
+      mobileError.style.display = "none";
+      mobileInput.classList.remove("error");
+    }
+  
+    // If all validations pass
+    if (valid) {
+        alert("Registration successful!");
+        document.querySelector("#register-popup").style.display="none";
+        document.querySelector("#loginpop").style.display="none";
+        
+    
+    }
+  });
+
+//closinglog and showing it
+document.getElementById("login-button").addEventListener("click", function(){
+    document.querySelector("#loginpop").style.display="flex";
+})
+document.getElementById("closed").addEventListener("click", function(){
+    document.querySelector("#loginpop").style.display="none";
+})
+document.getElementById("reglink").addEventListener("click", function(){
+    document.querySelector("#register-popup").style.display="none";
+})
+document.getElementById("reglink").addEventListener("click", function(){
+    document.querySelector("#register-popup").style.display="flex";
+})
+document.getElementById("register-close").addEventListener("click", function(){
+    document.querySelector("#register-popup").style.display="none";
+})
 
 
 
 
+// slider
 const slides = [
     'https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fe14a5852-727b-466a-a705-2e5a0a05083c.jpeg&w=1920&q=75',
     'https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fafdd9e49-7d41-4eca-881a-cc560c5642e4.jpeg&w=1920&q=75',
