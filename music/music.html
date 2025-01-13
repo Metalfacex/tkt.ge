@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKT.ge Inspired Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/main/main.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">
+
+    <title>Event Grid</title>
+    <style>
+
+        
+    </style>
 </head>
 <body>
     <div class="popup" id="loginpop">
@@ -119,69 +124,101 @@
                 <button><i class="fa-solid fa-train"></i><a href="/music/music.html">Music/Concerts</a></button>
             </div>
         </header>
-        <div class="hero">
-            <h1>About Us</h1>
-            <p>Connecting You to the Best Events, Entertainment, and Experiences in Georgia.</p>
+    
+        <h1 class="section-title">Music/Concert</h1>
+        <div class="button-container">
+            <div class="filter-buttons">
+                <button id="btn-today">Today</button>
+                <button id="btn-tomorrow">Tomorrow</button>
+                <button id="btn-weekend">Weekend</button>
+            </div>
+            <div class="date-picker-container">
+                <input type="date" id="date-picker">
+            </div>
         </div>
-    
-        <div class="content-container">
-            <div class="mission-vision">
-                <div class="mission">
-                    <h2>Our Mission</h2>
-                    <p>At TKT, we strive to provide an all-in-one platform for discovering, booking, and enjoying events across Georgia. Our mission is to make event access seamless and enjoyable for everyone.</p>
-                </div>
-                <div class="vision">
-                    <h2>Our Vision</h2>
-                    <p>We envision a world where everyone can easily connect with culture, entertainment, and experiences that inspire them. By simplifying event management and ticketing, we aim to build a vibrant community of event-goers and organizers.</p>
-                </div>
-            </div>
-    
-            <div class="highlights">
-                <h2>What We Offer</h2>
-                <div class="highlight-cards">
-                    <div class="card">
-                        <i class="fa-solid fa-ticket"></i>
-                        <h3>Event Ticketing</h3>
-                        <p>Book tickets for concerts, sports, theater, movies, and more with ease.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-masks-theater"></i>
-                        <h3>Entertainment</h3>
-                        <p>Discover the latest in arts, festivals, and live performances happening near you.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-train"></i>
-                        <h3>Transportation</h3>
-                        <p>Plan your travels with railway tickets and seamless connectivity.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-plane"></i>
-                        <h3>Travel & Tourism</h3>
-                        <p>Explore tours and destinations with our trusted partners.</p>
-                    </div>
+
+        <div class="grid" id="grid">
+            <div class="grid-item" data-id="1" data-date="2025-02-20">
+                <img src="https://static.tkt.ge/img/e69e93d3-85de-4f46-8b7f-e39283c8622f.jpeg" alt="Event">
+                <div class="date-label">Feb 20</div>
+                <div class="price-label">from $80</div>
+                <div class="content">
+                    <div class="title">456 Fusion x Glitz Community</div>
+                    <div class="description">Terrace Orbeliani</div>
                 </div>
             </div>
-    
-            <div class="team">
-                <h2>Meet Our Team</h2>
-                <div class="team-members">
-                    <div class="team-member">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsfsco.net%2Fwp-content%2Fuploads%2F2016%2F04%2F6140989632_1c8066563d_b.jpg&f=1&nofb=1&ipt=f6ca26078c129c74457e772b6b01b34833871b27c47f0ef962fc134edd8479e6&ipo=images" alt="Team Member">
-                        <h3>John Doe</h3>
-                        <p>CEO & Founder</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F024%2F354%2F297%2Fnon_2x%2Fbusiness-woman-isolated-illustration-ai-generative-free-photo.jpg&f=1&nofb=1&ipt=782263447a0e501e608f915f3be79018b4ae1b770c3f4732ae9b7041668ac674&ipo=images" alt="Team Member">
-                        <h3>Jane Smith</h3>
-                        <p>Head of Marketing</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fportrait-of-a-businessman-picture-id619636712%3Fk%3D20%26m%3D619636712%26s%3D612x612%26w%3D0%26h%3Djyft54gZfN743cIHa-kQdzAc7zvH6ymEp72URTCnn1A%3D&f=1&nofb=1&ipt=ec47b482ac74aff33ce390d37db33a2e50969e7f22c2669e0155df482fb1c896&ipo=images" alt="Team Member">
-                        <h3>Mike Brown</h3>
-                        <p>Technical Lead</p>
-                    </div>
+
+            <div class="grid-item" data-id="2" data-date="2025-03-10">
+                <img src="https://static.tkt.ge/img/9cfe887e-4e78-4d99-8d46-82cba6ebb8ae.jpeg" alt="Event">
+                <div class="date-label">Mar 10</div>
+                <div class="price-label">from $35</div>
+                <div class="content">
+                    <div class="title">Society Tbilisi Presents Jonni Gil</div>
+                    <div class="description">Golden Tulip Design Tbilisi</div>
                 </div>
             </div>
+
+            <div class="grid-item" data-id="3" data-date="2025-03-15">
+                <img src="https://static.tkt.ge/img/d2bdc3fc-d99e-4639-89ca-812e754776ad.jpeg" alt="Event">
+                <div class="date-label">Mar 15</div>
+                <div class="price-label">from $60</div>
+                <div class="content">
+                    <div class="title">Vivaldi. The Four Seasons.</div>
+                    <div class="description">Griboedov Theater</div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-id="4" data-date="2025-03-25">
+                <img src="https://static.tkt.ge/img/f85e44d1-adc0-4b42-9d68-db6d4cbcb83b.jpeg" alt="Event">
+                <div class="date-label">Mar 25</div>
+                <div class="price-label">from $20</div>
+                <div class="content">
+                    <div class="title">House of Disco Vol 4</div>
+                    <div class="description">Weather Report Sky Bar</div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-id="5" data-date="2025-04-05">
+                <img src="https://static.tkt.ge/img/4e164149-8dff-4c9d-9139-294ffc78cc12.jpeg" alt="Event">
+                <div class="date-label">Apr 05</div>
+                <div class="price-label">from $39</div>
+                <div class="content">
+                    <div class="title">Gunflower at Botanico</div>
+                    <div class="description">Botanico Tbilisi</div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-id="6" data-date="2025-04-10">
+                <img src="https://static.tkt.ge/img/008cd01e-b0c0-4594-977b-2e231e03a6f0.jpeg" alt="Placeholder Event">
+                <div class="date-label">Jan 18</div>
+                <div class="price-label">from-100$</div>
+                <div class="content">
+                    <div class="title">OLD NEW YEAR</div>
+                    <div class="description">Palace of Rituals</div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-id="7" data-date="2025-04-15">
+                <img src="https://via.placeholder.com/300x180" alt="Placeholder Event">
+                <div class="date-label">Apr 15</div>
+                <div class="price-label">from $45</div>
+                <div class="content">
+                    <div class="title">Placeholder Event Title 2</div>
+                    <div class="description">Placeholder Venue</div>
+                </div>
+            </div>
+
+            <div class="grid-item" data-id="8" data-date="2025-04-20">
+                <img src="https://via.placeholder.com/300x180" alt="Placeholder Event">
+                <div class="date-label">Apr 20</div>
+                <div class="price-label">from $30</div>
+                <div class="content">
+                    <div class="title">Placeholder Event Title 3</div>
+                    <div class="description">Placeholder Venue</div>
+                </div>
+            </div>
+            
+            
         </div>
     
         <footer>
@@ -277,6 +314,7 @@
             </div>
         </footer>
     </div>
+    <script src="music.js"></script>
     <script src="/main/main.js"></script>
 </body>
-
+</html>

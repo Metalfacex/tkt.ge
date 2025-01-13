@@ -1,0 +1,88 @@
+{
+    "en": {
+        "login-title": "LOGIN",
+        "facebook-login": "Continue with Facebook",
+        "or-divider": "or",
+        "email-placeholder": "E-Mail",
+        "email-placeholders":"E-Mail",
+        "email-error": "Email is incorrect",
+        "password-placeholder": "Password",
+        "toggle-password": "Show/Hide Password",
+        "password-error": "Password must be at least 8 characters",
+        "no-username": "Don't have a username?",
+        "register-link": "Register",
+        "REGISTER" : "REGISTER",
+        "confirm-password-placeholder": "Confirm Password",
+        "confirm-password-error": "Passwords do not match.",
+        "user-name-placeholder": "User Name",
+        "country-placeholder": "Country",
+        "city-placeholder": "City",
+        "mobile-placeholder": "Mobile Number",
+        "mobile-error": "Mobile number must contain only digits.",
+        "registration-date-placeholder": "Registration Date",
+        "register-button": "REGISTER",
+        "logo-alt": "Logo",
+        "search-placeholder": "Search...",
+        "login-button": "Login",
+        "language-button": "LANG",
+        "language-en": "EN",
+        "language-ka": "KA",
+        "category-button": "Category",
+        "about": "about",
+        "contact-link": "contact",
+        "music-link": "Music/Concerts",
+        "Rugby": "Rugby",
+        "Mountain_Resort":"Mountain Resort",
+        "Gabriadze_Theater" : "Gabriadze Theater",
+        "Movies": "Movies",
+        "Omnibus":"Omnibus",
+        "International_Events":"International Events",
+        "Georgian_Sailing_Club": "Georgian Sailing Club",
+        "Vaso_Abashidze_New_Theatre": "Vaso Abashidze New Theatre",
+        "popular":"popular",
+        "jan18":" jan 18",
+        "oldnewyear": "old new year",
+        "placeofritual":"Palace of Rituals",
+        "100dan":"from-100$"
+
+
+
+
+
+
+
+    },
+    "ka": {
+        "login-title": "შესვლა",
+        "facebook-login": "გაგრძელება Facebook-ით",
+        "or-divider": "ან",
+        "email-placeholder": "ელ-ფოსტა",
+        "email-placeholders":"ელ-ფოსტა",
+        "search-placeholder": "ძებნა...",
+        "email-error": "ელფოსტის მისამართი არასწორია",
+        "password-placeholder": "პაროლი",
+        "toggle-password": "პაროლის ჩვენება/დამალვა",
+        "password-error": "პაროლი უნდა შეიცავდეს მინიმუმ 8 სიმბოლოს",
+        "login-button": "შესვლა",
+        "no-username": "არ გაქვთ მომხმარებელი?",
+        "register-link": "რეგისტრაცია",
+        "REGISTER" : "რეგისტრაცია",
+        "Rugby": "რაგბი",
+        "Mountain_Resort":"მთის კურორტი",
+        "Gabriadze_Theater" : "გაბრიაძის თეატრი",
+        "Movies": "ფილმები",
+        "Omnibus":"ომნიბუსი",
+        "International_Events":"საერთაშორისო ღონისძიებები",
+        "Georgian_Sailing_Club": "საქართველოს მცურავი კლუბი",
+        "Vaso_Abashidze_New_Theatre": "ვასო აბაშიძის ახალი თეატრი",
+        "popular":"პოპულარული",
+        "jan18":" იან 18",
+        "oldnewyear": "ძველი ახალი წელი",
+        "placeofritual":"რიტუალების სასახლე",
+        "100dan":"100$-დან"
+
+        
+
+    }
+  }
+  

@@ -1,4 +1,10 @@
+
+
+
+
 // login
+
+
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("email-error");
 const passwordInput = document.getElementById("password");
@@ -352,3 +358,38 @@ function updateAltPopularSlider() {
 }
 
 updateAltPopularSlider();
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch("../lang.json")
+        .then(response => response.json())
+        .then(translations => {
+            // Event listeners for language buttons
+            document.getElementById("en").addEventListener("click", () => switchLanguage("en", translations));
+            document.getElementById("ka").addEventListener("click", () => switchLanguage("ka", translations));
+        });
+
+  function switchLanguage(lang, translations) {
+      // Update text content for elements with data-key attributes
+      document.querySelectorAll("[data-key]").forEach(element => {
+            const key = element.getAttribute("data-key");
+            if (translations[lang][key]) {
+                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA" || element.tagName ==="BUTTON") {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+      }
+  
+  
+// Add click event for redirecting to event page
+  const grid = document.getElementById('grid');
+  const items = grid.querySelectorAll('.popular-box');
+  items.forEach(item => {
+      item.addEventListener('click', () => {
+          const eventId = item.getAttribute('data-id');
+          window.location.href = `../event/event.html?id=${eventId}`;
+      });
+  });
+});

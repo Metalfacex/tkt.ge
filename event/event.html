@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKT.ge Inspired Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="event.css">
     <link rel="stylesheet" href="/main/main.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Event Details</title>
 </head>
 <body>
     <div class="popup" id="loginpop">
@@ -119,71 +118,14 @@
                 <button><i class="fa-solid fa-train"></i><a href="/music/music.html">Music/Concerts</a></button>
             </div>
         </header>
-        <div class="hero">
-            <h1>About Us</h1>
-            <p>Connecting You to the Best Events, Entertainment, and Experiences in Georgia.</p>
+        <div id="banner" class="banner"></div>
+        <div class="event-info">
+            <div id="title" class="title">Event Title</div>
+            <div id="date" class="date">Event Date</div>
+            <div id="description" class="description">Event Description</div>
+            <div id="price" class="price">Price</div>
+            <button class="back-button">buy ticket</button>
         </div>
-    
-        <div class="content-container">
-            <div class="mission-vision">
-                <div class="mission">
-                    <h2>Our Mission</h2>
-                    <p>At TKT, we strive to provide an all-in-one platform for discovering, booking, and enjoying events across Georgia. Our mission is to make event access seamless and enjoyable for everyone.</p>
-                </div>
-                <div class="vision">
-                    <h2>Our Vision</h2>
-                    <p>We envision a world where everyone can easily connect with culture, entertainment, and experiences that inspire them. By simplifying event management and ticketing, we aim to build a vibrant community of event-goers and organizers.</p>
-                </div>
-            </div>
-    
-            <div class="highlights">
-                <h2>What We Offer</h2>
-                <div class="highlight-cards">
-                    <div class="card">
-                        <i class="fa-solid fa-ticket"></i>
-                        <h3>Event Ticketing</h3>
-                        <p>Book tickets for concerts, sports, theater, movies, and more with ease.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-masks-theater"></i>
-                        <h3>Entertainment</h3>
-                        <p>Discover the latest in arts, festivals, and live performances happening near you.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-train"></i>
-                        <h3>Transportation</h3>
-                        <p>Plan your travels with railway tickets and seamless connectivity.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-plane"></i>
-                        <h3>Travel & Tourism</h3>
-                        <p>Explore tours and destinations with our trusted partners.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="team">
-                <h2>Meet Our Team</h2>
-                <div class="team-members">
-                    <div class="team-member">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsfsco.net%2Fwp-content%2Fuploads%2F2016%2F04%2F6140989632_1c8066563d_b.jpg&f=1&nofb=1&ipt=f6ca26078c129c74457e772b6b01b34833871b27c47f0ef962fc134edd8479e6&ipo=images" alt="Team Member">
-                        <h3>John Doe</h3>
-                        <p>CEO & Founder</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F024%2F354%2F297%2Fnon_2x%2Fbusiness-woman-isolated-illustration-ai-generative-free-photo.jpg&f=1&nofb=1&ipt=782263447a0e501e608f915f3be79018b4ae1b770c3f4732ae9b7041668ac674&ipo=images" alt="Team Member">
-                        <h3>Jane Smith</h3>
-                        <p>Head of Marketing</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fportrait-of-a-businessman-picture-id619636712%3Fk%3D20%26m%3D619636712%26s%3D612x612%26w%3D0%26h%3Djyft54gZfN743cIHa-kQdzAc7zvH6ymEp72URTCnn1A%3D&f=1&nofb=1&ipt=ec47b482ac74aff33ce390d37db33a2e50969e7f22c2669e0155df482fb1c896&ipo=images" alt="Team Member">
-                        <h3>Mike Brown</h3>
-                        <p>Technical Lead</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
         <footer>
             <div class="footer-sections">
                 <div class="footer-column">
@@ -277,6 +219,9 @@
             </div>
         </footer>
     </div>
+
+
+    <script src="event.js"></script>
     <script src="/main/main.js"></script>
 </body>
-
+</html>

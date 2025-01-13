@@ -5,75 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TKT.ge Inspired Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="popup" id="loginpop">
         <div class="popup-content">
-          <div class="namex">
-            <h3>LOGIN</h3>
-            <a href="#" class="close-icon" id="closed"><i class="fa-solid fa-xmark"></i></a>
-          </div>
-          <div class="social-login">
-            <button class="facebook-btn">
-              <i class="fa-brands fa-facebook-f"></i> Continue with Facebook
-            </button>
-          </div>
-          <p class="divider">or</p>
-          <div>
-            <input type="email" id="email" placeholder="E-Mail" />
-            <p class="error-message" id="email-error">Email is incorrect</p>
-          </div>
-          <div class="password-container">
-            <input type="password" id="password" placeholder="Password" />
-            <span class="toggle-password" id="toggle-password">
-              <i class="fa-solid fa-eye"></i>
-            </span>
-            <p class="error-message" id="password-error">Password must be at least 8 characters</p>
-          </div>
-          <button class="login-btn" id="login-btn">LOGIN</button>
-          <p class="no-username">
-            Don't have a username? <button class="register-link" id="reglink">Register</button>
-          </p>
+            <div class="namex">
+                <h3 data-key="login">LOGIN</h3>
+                <a href="#" class="close-icon" id="closed"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <div class="social-login">
+                <button class="facebook-btn" data-key="facebook-login"><i class="fa-brands fa-facebook-f"></i> Continue with Facebook</button>
+            </div>
+            <p class="divider" data-key="or-divider">or</p>
+            <div>
+                <input type="email" id="email" placeholder="E-Mail" data-key="email-placeholder" />
+                <p class="error-message" id="email-error" data-key="email-error">Email is incorrect</p>
+            </div>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" data-key="password-placeholder" />
+                <span class="toggle-password" id="toggle-password" >
+                    <i class="fa-solid fa-eye"></i>
+                </span>
+                <p class="error-message" id="password-error" data-key="password-error">Password must be at least 8 characters</p>
+            </div>
+            <button class="login-btn" id="login-btn" data-key="login-button">LOGIN</button>
+            <p class="no-username" data-key="no-username">Don't have a username?</p> 
+            <button class="register-link" id="reglink" data-key="register-link">Register</button>
         </div>
     </div>
     <div class="popup" id="register-popup">
         <div class="popup-content">
           <div class="namex">
-            <h3>REGISTER</h3>
+            <h3 data-key="REGISTER">REGISTER</h3>
             <a href="#" id="register-close"><i class="fa-solid fa-xmark"></i></a>
           </div>
           <div>
-            <input type="email" id="register-email" placeholder="E-Mail">
+            <input type="email" id="register-email" placeholder="E-Mail" data-key="email-placeholders">
             <p class="error-message" id="register-email-error">Email must contain "@" and at least 2 characters after it.</p>
           </div>
           <div class="password-container">
-            <input type="password" id="register-password" placeholder="Password">
-            <p class="error-message" id="register-password-error">Password must be at least 8 characters long.</p>
+            <input type="password" id="register-password" placeholder="Password" data-key="password-placeholder">
+            <p class="error-message" id="register-password-error" data-link="password-error">Password must be at least 8 characters long.</p>
             <p class="password-strength" id="password-strength"></p>
           </div>
           <div class="password-container">
-            <input type="password" id="confirm-password" placeholder="Confirm Password">
-            <p class="error-message" id="confirm-password-error">Passwords do not match.</p>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" data-key="confirm-password-placeholder">
+            <p class="error-message" id="confirm-password-error" data-key="confirm-password-error">Passwords do not match.</p>
           </div>
           <div>
-            <input type="text" id="user-name" placeholder="User Name">
+            <input type="text" id="user-name" placeholder="User Name" data-key="user-name-placeholder">
           </div>
           <div>
-            <input type="text" id="country" placeholder="Country">
+            <input type="text" id="country" placeholder="Country" data-key="country-placeholder">
           </div>
           <div>
-            <input type="text" id="city" placeholder="City">
+            <input type="text" id="city" placeholder="City" data-key="city-placeholder">
           </div>
           <div>
-            <input type="text" id="mobile" placeholder="Mobile Number">
-            <p class="error-message" id="mobile-error">Mobile number must contain only digits.</p>
+            <input type="text" id="mobile" placeholder="Mobile Number" data-key="mobile-placeholder">
+            <p class="error-message" id="mobile-error" data-key="mobile-error">Mobile number must contain only digits.</p>
           </div>
           <div>
-            <input type="date" id="registration-date">
+            <input type="date" id="registration-date" data-key="registration-date-placeholder">
           </div>
-          <button class="login-btn" id="register-btn">REGISTER</button>
+          <button class="login-btn" id="register-btn" data-key="register-button">REGISTER</button>
         </div>
     </div>
       
@@ -84,40 +80,37 @@
         
         <header>
             <div class="top-nav">
-                <div class="left-section">
-                    <div class="logo">
-                        <a href="/main/main.html"><img src="https://tkt.ge/static/brand/logo.svg" alt="Logo"> </a>
-                    </div>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search...">
-                    </div>
+              <div class="left-section">
+                <div class="logo">
+                  <a href="/main/main.html"><img src="https://tkt.ge/static/brand/logo.svg" alt="Logo" data-link="logo-alt"> </a>
                 </div>
-                <div class="right-section buttons">
-                    <button id="login-button"><i class="fas fa-user"></i> Login</button>
-                    <div class="dropdown">
-                        <button><i class="fas fa-globe"></i> EN</button>
-                        <div class="dropdown-menu">
-                            <button>EN</button>
-                            <button>KA</button>
-                        </div>
-                    </div>
-                    
+                <div class="search-bar">
+                  <input type="text" placeholder="Search..." data-link="search-placeholder">
                 </div>
+              </div>
+              <div class="right-section buttons">
+                <button id="login-button" data-link="login-button"><i class="fas fa-user"></i> Login</button>
+                <div class="dropdown">
+                  <button data-link="language-button"><i class="fas fa-globe"></i> LANG</button>
+                  <div class="dropdown-menu">
+                    <button id="en" data-link="language-en">EN</button>
+                    <button id="ka" data-link="language-ka">KA</button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="category-buttons">
-                <div class="dropdown">
-                    <button><i class="fa-solid fa-icons"></i>Category</button>
-                    <div class="dropdown-menu">
-                        <a href="#">Movies</a>
-                        <a href="#">Music/Concerts</a>
-                        <a href="#">Railway</a>
-                        <a href="#">Theater</a>
-                    </div>
+              <div class="dropdown">
+                <button data-link="category-button"><i class="fa-solid fa-icons"></i>Category</button>
+                <div class="dropdown-menu">
+                  <a href="/about/about.html" data-link="about">about</a>
+                  <a href="/contact/contact.html" data-link="contact-link">contact</a>
+                  <a href="/music/music.html" data-link="music-link">Music/Concerts</a>
                 </div>
-                <button><i class="fa-solid fa-ticket-simple"></i><a href="/about/about.html">about</a></button>
-                <button><i class="fa-solid fa-music"></i><a href="/contact/contact.html">contact</a></button>
-                <button><i class="fa-solid fa-train"></i>Railway</button>
-                <button><i class="fa-solid fa-masks-theater"></i>Theater</button>
+              </div>
+              <button><i class="fa-solid fa-ticket-simple"></i><a href="/about/about.html" data-link="about">about</a></button>
+              <button><i class="fa-solid fa-music"></i><a href="/contact/contact.html" data-link="contact-link">contact</a></button>
+              <button><i class="fa-solid fa-train"></i><a href="/music/music.html" data-link="music-link">Music/Concerts</a></button>
             </div>
         </header>
 
@@ -132,54 +125,54 @@
         <div class="circle-row">
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fb089438a-d126-4320-b5f4-fedc7b75f5c5.jpeg&w=256&q=75" alt="Rugby" loading="lazy">
-                <p>Rugby</p>
+                <p data-key="Rugby">Rugby</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2F494eea2b-13a9-4a68-bbfe-8c571013908d.jpeg&w=256&q=75" alt="Mountain Resort" loading="lazy">
-                <p>Mountain Resort</p>
+                <p data-key="Mountain_Resort">Mountain Resort</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2F5aedd1ad-85a0-40aa-ad3b-c936678c8702.jpeg&w=256&q=75" alt="Gabriadze Theater" loading="lazy">
-                <p>Gabriadze Theater</p>
+                <p data-key="gab_theater">Gabriadze Theater</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fee43dc51-1892-414f-a27c-674a28da21e0.jpeg&w=256&q=75" alt="Movies" loading="lazy">
-                <p>Movies</p>
+                <p data-key="Movies">Movies</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2F916d5c5a-df59-4f84-95a3-d5693a4d9b43.jpeg&w=256&q=75" alt="Omnibus" loading="lazy">
-                <p>Omnibus</p>
+                <p  data-key="Omnibus">Omnibus</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fee40ef26-aa33-48c2-a18d-df08156cc69f.jpeg&w=256&q=75" alt="International Events" loading="lazy">
-                <p>International Events</p>
+                <p data-key="International_Events">International Events</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fd4fec4a2-b8ad-4d77-813a-0013b364b361.jpeg&w=256&q=75" alt="Georgian Sailing Club" loading="lazy">
-                <p>Georgian Sailing Club</p>
+                <p data-key="Georgian_Sailing_Club">Georgian Sailing Club</p>
             </div>
             <div class="circle">
                 <img src="https://tkt.ge/_next/image?url=https%3A%2F%2Fstatic.tkt.ge%2Fimg%2Fa96b25e9-36a5-4047-b5c1-3e1e855f85cf.jpeg&w=256&q=75" alt="Vaso Abashidze New Theatre" loading="lazy">
-                <p>Vaso Abashidze New Theatre</p>
+                <p data-key="Vaso_Abashidze_New_Theatre">Vaso Abashidze New Theatre</p>
             </div>
         </div>
 
         <div class="popular-section">
-            <div class="popular-header">Popular</div>
-            <div class="popular-slider">
+            <div class="popular-header" data-key="popular">Popular</div>
+            <div class="popular-slider" id="grid">
                 <button class="popular-arrow left">&#9664;</button>
-                <div class="popular-box">
-                    <div class="date-box">Jan 15</div>
+                <div class="popular-box" data-id="6">
+                    <div class="date-box" data-key="jan18">Jan 18</div>
                     <img src="https://static.tkt.ge/img/008cd01e-b0c0-4594-977b-2e231e03a6f0.jpeg" alt="Popular 1">
                     <div class="info">
-                        <div class="title">OLD NEW YEAR</div>
-                        <div class="description">Palace of Rituals</div>
+                        <div class="title" data-key="oldnewyear">OLD NEW YEAR</div>
+                        <div class="description" data-key="placeofritual">Palace of Rituals</div>
                     </div>
                     <div class="overlay">
-                        <button>from-100$</button>
+                        <button data-key="100dan">from-100$</button>
                     </div>
                 </div>
-                <div class="popular-box">
+                <div class="popular-box" data-id="1">
                     <div class="date-box">Feb 20</div>
                     <img src="https://static.tkt.ge/img/e69e93d3-85de-4f46-8b7f-e39283c8622f.jpeg" alt="Popular 2">
                     <div class="info">
@@ -190,7 +183,7 @@
                         <button>from-80$</button>
                     </div>
                 </div>
-                <div class="popular-box">
+                <div class="popular-box" data-id="2">
                     <div class="date-box">Mar 10</div>
                     <img src="https://static.tkt.ge/img/9cfe887e-4e78-4d99-8d46-82cba6ebb8ae.jpeg" alt="Popular 3">
                     <div class="info">
@@ -201,7 +194,7 @@
                         <button>from-$35</button>
                     </div>
                 </div>
-                <div class="popular-box">
+                <div class="popular-box" data-id="3">
                     <div class="imgstuff">
                         <div class="date-box">mar 15</div>
                         <div class="overlay">
@@ -215,7 +208,7 @@
                     </div>
                     
                 </div>
-                <div class="popular-box">
+                <div class="popular-box" data-id="4">
                     <div class="date-box">Mar 25</div>
                     <img src="https://static.tkt.ge/img/f85e44d1-adc0-4b42-9d68-db6d4cbcb83b.jpeg" alt="Popular 4">
                     <div class="info">
@@ -226,7 +219,7 @@
                         <button>from-$20</button>
                     </div>
                 </div>
-                <div class="popular-box">
+                <div class="popular-box" data-id="5">
                     <div class="date-box">Apr 05</div>
                     <img src="https://static.tkt.ge/img/4e164149-8dff-4c9d-9139-294ffc78cc12.jpeg" alt="Popular 4">
                     <div class="info">
@@ -258,10 +251,10 @@
                 </div>
 
                 <div class="alt-popular-section">
-                    <div class="alt-popular-slider">
+                    <div class="alt-popular-slider" id="grid">
                         <button class="alt-popular-arrow alt-left">&#9664;</button>
                         
-                        <div class="alt-popular-box">
+                        <div class="alt-popular-box" data-id="6">
                             <div class="alt-date-box">Jan 15</div>
                             <img src="https://static.tkt.ge/img/008cd01e-b0c0-4594-977b-2e231e03a6f0.jpeg" alt="Popular 1">
                             <div class="alt-info">
@@ -273,7 +266,7 @@
                             </div>
                         </div>
                 
-                        <div class="alt-popular-box">
+                        <div class="alt-popular-box" data-id="1">
                             <div class="alt-date-box">Feb 20</div>
                             <img src="https://static.tkt.ge/img/e69e93d3-85de-4f46-8b7f-e39283c8622f.jpeg" alt="Popular 2">
                             <div class="alt-info">
@@ -285,7 +278,7 @@
                             </div>
                         </div>
                 
-                        <div class="alt-popular-box">
+                        <div class="alt-popular-box" data-id="2">
                             <div class="alt-date-box">Mar 10</div>
                             <img src="https://static.tkt.ge/img/9cfe887e-4e78-4d99-8d46-82cba6ebb8ae.jpeg" alt="Popular 3">
                             <div class="alt-info">
@@ -297,7 +290,7 @@
                             </div>
                         </div>
                 
-                        <div class="alt-popular-box">
+                        <div class="alt-popular-box" data-id="3">
                             <div class="alt-imgstuff">
                                 <div class="alt-date-box">Mar 15</div>
                                 <div class="alt-overlay">
@@ -311,7 +304,7 @@
                             </div>
                         </div>
                 
-                        <div class="alt-popular-box">
+                        <div class="alt-popular-box" data-id="4">
                             <div class="alt-date-box">Mar 25</div>
                             <img src="https://static.tkt.ge/img/f85e44d1-adc0-4b42-9d68-db6d4cbcb83b.jpeg" alt="Popular 4">
                             <div class="alt-info">
@@ -323,7 +316,7 @@
                             </div>
                         </div>
                 
-                        <div class="alt-popular-box">
+                        <div class="alt-popular-box" data-id="5">
                             <div class="alt-date-box">Apr 05</div>
                             <img src="https://static.tkt.ge/img/4e164149-8dff-4c9d-9139-294ffc78cc12.jpeg" alt="Popular 4">
                             <div class="alt-info">
@@ -349,99 +342,100 @@
 
 
 
-
-    <footer>
-        <div class="footer-sections">
-            <div class="footer-column">
-                <h4>CATEGORIES</h4>
-                <ul>
-                    <li>Music / Concert</li>
-                    <li>Theatre</li>
-                    <li>Opera</li>
-                    <li>Sport</li>
-                    <li>International</li>
-                    <li>Omnibus</li>
-                    <li>Festival</li>
-                    <li>Kids</li>
-                    <li>Conference</li>
-                    <li>Stand Up</li>
-                    <li>Tourism</li>
-                    <li>Hobby</li>
-                    <li>Masterclass</li>
-                    <li>Museum</li>
-                    <li>Sea</li>
-                </ul>
+    
+        <footer>
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <li>Music / Concert</li>
+                        <li>Theatre</li>
+                        <li>Opera</li>
+                        <li>Sport</li>
+                        <li>International</li>
+                        <li>Omnibus</li>
+                        <li>Festival</li>
+                        <li>Kids</li>
+                        <li>Conference</li>
+                        <li>Stand Up</li>
+                        <li>Tourism</li>
+                        <li>Hobby</li>
+                        <li>Masterclass</li>
+                        <li>Museum</li>
+                        <li>Sea</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li>Online Help</li>
+                        <li>Anonymous Hotline</li>
+                        <li>Feedback</li>
+                        <li>For Organizations</li>
+                        <li>FAQ</li>
+                        <li>+995 32 2195577</li>
+                        <li>support@tkt.ge</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>MOVIES</h4>
+                    <ul>
+                        <li>Amirani Cinema</li>
+                        <li>Cavea Grand Mall Batumi</li>
+                        <li>Cavea Tbilisi Mall</li>
+                        <li>Cavea East Point</li>
+                        <li>Cavea Galleria</li>
+                        <li>Cavea City Mall</li>
+                        <li>Iveria Khashuri</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>RAILWAY</h4>
+                    <ul>
+                        <li>Tbilisi - Batumi</li>
+                        <li>Tbilisi - Poti</li>
+                        <li>Tbilisi - Kutaisi</li>
+                        <li>Tbilisi - Ureki</li>
+                        <li>Tbilisi - Ozurgeti</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FLY</h4>
+                    <ul>
+                        <li>Airlines</li>
+                        <li>Tbilisi - Istanbul</li>
+                        <li>Tbilisi - Berlin</li>
+                        <li>Tbilisi - Paris</li>
+                        <li>Tbilisi - Barcelona</li>
+                        <li>Tbilisi - Baku</li>
+                        <li>Explanatory Dictionary</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>HELP</h4>
-                <ul>
-                    <li>Online Help</li>
-                    <li>Anonymous Hotline</li>
-                    <li>Feedback</li>
-                    <li>For Organizations</li>
-                    <li>FAQ</li>
-                    <li>+995 32 2195577</li>
-                    <li>support@tkt.ge</li>
-                </ul>
+            <div class="footer-bottom">
+                <div class="links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Environmental Policy</a>
+                    <a href="#">TKT Club Membership</a>
+                </div>
+                <div class="partners">
+                    <img src="tnet-logo.png" alt="TNET">
+                    <img src="myauto-logo.png" alt="MyAuto">
+                    <img src="myparts-logo.png" alt="MyParts">
+                    <img src="myhome-logo.png" alt="MyHome">
+                    <img src="mymarket-logo.png" alt="MyMarket">
+                    <img src="myjobs-logo.png" alt="MyJobs">
+                    <img src="superapp-logo.png" alt="SuperApp">
+                    <img src="vendoo-logo.png" alt="Vendoo">
+                    <img src="tkt-logo.png" alt="TKT">
+                    <img src="swoop-logo.png" alt="Swoop">
+                    <img src="livo-logo.png" alt="Livo">
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>MOVIES</h4>
-                <ul>
-                    <li>Amirani Cinema</li>
-                    <li>Cavea Grand Mall Batumi</li>
-                    <li>Cavea Tbilisi Mall</li>
-                    <li>Cavea East Point</li>
-                    <li>Cavea Galleria</li>
-                    <li>Cavea City Mall</li>
-                    <li>Iveria Khashuri</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>RAILWAY</h4>
-                <ul>
-                    <li>Tbilisi - Batumi</li>
-                    <li>Tbilisi - Poti</li>
-                    <li>Tbilisi - Kutaisi</li>
-                    <li>Tbilisi - Ureki</li>
-                    <li>Tbilisi - Ozurgeti</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>FLY</h4>
-                <ul>
-                    <li>Airlines</li>
-                    <li>Tbilisi - Istanbul</li>
-                    <li>Tbilisi - Berlin</li>
-                    <li>Tbilisi - Paris</li>
-                    <li>Tbilisi - Barcelona</li>
-                    <li>Tbilisi - Baku</li>
-                    <li>Explanatory Dictionary</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="links">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Policy</a>
-                <a href="#">Environmental Policy</a>
-                <a href="#">TKT Club Membership</a>
-            </div>
-            <div class="partners">
-                <img src="tnet-logo.png" alt="TNET">
-                <img src="myauto-logo.png" alt="MyAuto">
-                <img src="myparts-logo.png" alt="MyParts">
-                <img src="myhome-logo.png" alt="MyHome">
-                <img src="mymarket-logo.png" alt="MyMarket">
-                <img src="myjobs-logo.png" alt="MyJobs">
-                <img src="superapp-logo.png" alt="SuperApp">
-                <img src="vendoo-logo.png" alt="Vendoo">
-                <img src="tkt-logo.png" alt="TKT">
-                <img src="swoop-logo.png" alt="Swoop">
-                <img src="livo-logo.png" alt="Livo">
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </div>
 
     <script src="main.js"></script>
