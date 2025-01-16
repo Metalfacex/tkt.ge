@@ -23,7 +23,7 @@
         "register-button": "REGISTER",
         "logo-alt": "Logo",
         "search-placeholder": "Search...",
-        "login-button": "Login",
+        "login-buttons": "Login",
         "language-button": "LANG",
         "language-en": "EN",
         "language-ka": "KA",
@@ -158,7 +158,45 @@
         "form-email-placeholder": "Enter your email",
         "form-message-label": "Your Message",
         "form-message-placeholder": "Enter your message",
-        "form-submit-button": "Submit"
+        "form-submit-button": "Submit",
+
+
+
+        "event_title_1": "456 Fusion x Glitz Community",
+        "event_date_1": "February 20, 2025",
+        "event_description_1": "Experience a fusion of music and community vibes at Terrace Orbeliani.",
+        "event_price_1": "From $80",
+
+        "event_title_2": "Society Tbilisi Presents Jonni Gil",
+        "event_date_2": "March 10, 2025",
+        "event_description_2": "A night to remember at Golden Tulip Design Tbilisi with Jonni Gil.",
+        "event_price_2": "From $35",
+
+        "event_title_3": "Vivaldi. The Four Seasons.",
+        "event_date_3": "March 15, 2025",
+        "event_description_3": "Experience the classical masterpiece live at Griboedov Theater.",
+        "event_price_3": "From $60",
+
+        "event_title_4": "House of Disco Vol 4",
+        "event_date_4": "March 25, 2025",
+        "event_description_4": "Dance to the beats at Weather Report Sky Bar.",
+        "event_price_4": "From $20",
+
+        "event_title_5": "Gunflower at Botanico",
+        "event_date_5": "April 5, 2025",
+        "event_description_5": "Groove with Gunflower at the beautiful Botanico Tbilisi.",
+        "event_price_5": "From $39",
+
+        "event_title_6": "OLD NEW YEAR",
+        "event_date_6": "January 5, 2025",
+        "event_description_6": "Palace of Rituals.",
+        "event_price_6": "From $100",
+
+        "Today":"today",
+        "Tomorrow":"tomorrow",
+        "Weekend":"Weekend"
+
+
         
     
 
@@ -200,7 +238,7 @@
         "password-placeholder": "პაროლი",
         "toggle-password": "პაროლის ჩვენება/დამალვა",
         "password-error": "პაროლი უნდა შეიცავდეს მინიმუმ 8 სიმბოლოს",
-        "login-button": "შესვლა",
+        "login-buttons": "შესვლა",
         "no-username": "არ გაქვთ მომხმარებელი?",
         "register-link": "რეგისტრაცია",
         "REGISTER" : "რეგისტრაცია",
@@ -331,7 +369,43 @@
         "form-email-placeholder": "ჩაწერეთ თქვენი ელ.ფოსტა",
         "form-message-label": "თქვენი შეტყობინება",
         "form-message-placeholder": "ჩაწერეთ თქვენი შეტყობინება",
-        "form-submit-button": "გაგზავნა"
+        "form-submit-button": "გაგზავნა",
+
+
+
+        "event_title_1": "456 შერწყმა x გლიცის საზოგადოება",
+        "event_date_1": "2025 წლის 20 თებერვალი",
+        "event_description_1": "გამოცადეთ მუსიკისა და საზოგადოების ვიბრაციების შერწყმა ტერასა ორბელიანში.",
+        "event_price_1": "80$-დან",
+
+        "event_title_2": "საზოგადოება თბილისი წარმოგიდგენთ ჯონი გილს",
+        "event_date_2": "2025 წლის 10 მარტი",
+        "event_description_2": "ღამე, რომელიც არასდროს დაგავიწყდებათ Golden Tulip Design Tbilisi-სთან ერთად.",
+        "event_price_2": "35$-დან",
+
+        "event_title_3": "ვივალდი. ოთხი სეზონი.",
+        "event_date_3": "2025 წლის 15 მარტი",
+        "event_description_3": "შეხვდით კლასიკურ შედევრს გრიბოედოვის თეატრში.",
+        "event_price_3": "60$-დან",
+
+        "event_title_4": "დისკოს სახლი ტომი 4",
+        "event_date_4": "2025 წლის 25 მარტი",
+        "event_description_4": "იცეკვეთ Weather Report Sky Bar-ში.",
+        "event_price_4": "20$-დან",
+
+        "event_title_5": "განფლოუერი ბოტანიკოში",
+        "event_date_5": "2025 წლის 5 აპრილი",
+        "event_description_5": "გართობა და ცეკვა ბოტანიკო თბილისი.",
+        "event_price_5": "39$-დან",
+
+        "event_title_6": "ძველი ახალი წელი",
+        "event_date_6": "2025 წლის 5 იანვარი",
+        "event_description_6": "რიტუალების სასახლე.",
+        "event_price_6": "100$-დან",
+
+        "Today":"დღეს",
+        "Tomorrow":"ხვალ",
+        "Weekend":"კვირის დღეები"
 
         
 

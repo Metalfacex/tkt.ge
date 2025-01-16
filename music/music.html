@@ -17,69 +17,66 @@
 <body>
     <div class="popup" id="loginpop">
         <div class="popup-content">
-          <div class="namex">
-            <h3>LOGIN</h3>
-            <a href="#" class="close-icon" id="closed"><i class="fa-solid fa-xmark"></i></a>
-          </div>
-          <div class="social-login">
-            <button class="facebook-btn">
-              <i class="fa-brands fa-facebook-f"></i> Continue with Facebook
-            </button>
-          </div>
-          <p class="divider">or</p>
-          <div>
-            <input type="email" id="email" placeholder="E-Mail" />
-            <p class="error-message" id="email-error">Email is incorrect</p>
-          </div>
-          <div class="password-container">
-            <input type="password" id="password" placeholder="Password" />
-            <span class="toggle-password" id="toggle-password">
-              <i class="fa-solid fa-eye"></i>
-            </span>
-            <p class="error-message" id="password-error">Password must be at least 8 characters</p>
-          </div>
-          <button class="login-btn" id="login-btn">LOGIN</button>
-          <p class="no-username">
-            Don't have a username? <button class="register-link" id="reglink">Register</button>
-          </p>
+            <div class="namex">
+                <h3 data-key="login">LOGIN</h3>
+                <a href="#" class="close-icon" id="closed"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <div class="social-login">
+                <button class="facebook-btn" data-key="facebook-login"><i class="fa-brands fa-facebook-f"></i> Continue with Facebook</button>
+            </div>
+            <p class="divider" data-key="or-divider">or</p>
+            <div>
+                <input type="email" id="email" placeholder="E-Mail" data-key="email-placeholder" />
+                <p class="error-message" id="email-error" data-key="email-error">Email is incorrect</p>
+            </div>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" data-key="password-placeholder" />
+                <span class="toggle-password" id="toggle-password" >
+                    <i class="fa-solid fa-eye"></i>
+                </span>
+                <p class="error-message" id="password-error" data-key="password-error">Password must be at least 8 characters</p>
+            </div>
+            <button class="login-btn" id="login-btn" data-key="login-button">LOGIN</button>
+            <p class="no-username" data-key="no-username">Don't have a username?</p> 
+            <button class="register-link" id="reglink" data-key="register-link">Register</button>
         </div>
     </div>
     <div class="popup" id="register-popup">
         <div class="popup-content">
           <div class="namex">
-            <h3>REGISTER</h3>
+            <h3 data-key="REGISTER">REGISTER</h3>
             <a href="#" id="register-close"><i class="fa-solid fa-xmark"></i></a>
           </div>
           <div>
-            <input type="email" id="register-email" placeholder="E-Mail">
-            <p class="error-message" id="register-email-error">Email must contain "@" and at least 2 characters after it.</p>
+            <input type="email" id="register-email" placeholder="E-Mail" data-key="email-placeholder">
+            <p class="error-message" id="register-email-error" data-key="email-error">Email must contain "@" and at least 2 characters after it.</p>
           </div>
           <div class="password-container">
-            <input type="password" id="register-password" placeholder="Password">
-            <p class="error-message" id="register-password-error">Password must be at least 8 characters long.</p>
+            <input type="password" id="register-password" placeholder="Password" data-key="password-placeholder">
+            <p class="error-message" id="register-password-error" data-key="password-error">Password must be at least 8 characters long.</p>
             <p class="password-strength" id="password-strength"></p>
           </div>
           <div class="password-container">
-            <input type="password" id="confirm-password" placeholder="Confirm Password">
-            <p class="error-message" id="confirm-password-error">Passwords do not match.</p>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" data-key="confirm-password-placeholder">
+            <p class="error-message" id="confirm-password-error" data-key="confirm-password-error">Passwords do not match.</p>
           </div>
           <div>
-            <input type="text" id="user-name" placeholder="User Name">
+            <input type="text" id="user-name" placeholder="User Name" data-key="user-name-placeholder">
           </div>
           <div>
-            <input type="text" id="country" placeholder="Country">
+            <input type="text" id="country" placeholder="Country" data-key="country-placeholder">
           </div>
           <div>
-            <input type="text" id="city" placeholder="City">
+            <input type="text" id="city" placeholder="City" data-key="city-placeholder">
           </div>
           <div>
-            <input type="text" id="mobile" placeholder="Mobile Number">
-            <p class="error-message" id="mobile-error">Mobile number must contain only digits.</p>
+            <input type="text" id="mobile" placeholder="Mobile Number" data-key="mobile-placeholder">
+            <p class="error-message" id="mobile-error" data-key="mobile-error">Mobile number must contain only digits.</p>
           </div>
           <div>
-            <input type="date" id="registration-date">
+            <input type="date" id="registration-date" data-key="registration-date-placeholder">
           </div>
-          <button class="login-btn" id="register-btn">REGISTER</button>
+          <button class="login-btn" id="register-btn" data-key="register-button">REGISTER</button>
         </div>
     </div>
       
@@ -90,47 +87,46 @@
         
         <header>
             <div class="top-nav">
-                <div class="left-section">
-                    <div class="logo">
-                        <a href="/main/main.html"><img src="https://tkt.ge/static/brand/logo.svg" alt="Logo"> </a>
-                    </div>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search...">
-                    </div>
+              <div class="left-section">
+                <div class="logo">
+                  <a href="/main/main.html"><img src="https://tkt.ge/static/brand/logo.svg" alt="Logo"> </a>
                 </div>
-                <div class="right-section buttons">
-                    <button id="login-button"><i class="fas fa-user"></i> Login</button>
-                    <div class="dropdown">
-                        <button><i class="fas fa-globe"></i> EN</button>
-                        <div class="dropdown-menu">
-                            <button>EN</button>
-                            <button>KA</button>
-                        </div>
-                    </div>
-                    
+                <div class="search-bar">
+                  <input type="text" placeholder="Search..." data-key="search-placeholder">
                 </div>
+              </div>
+              <div class="right-section buttons">
+                <button id="login-button" ><i class="fas fa-user"></i></button>
+                <div class="dropdown">
+                  <button><i class="fas fa-globe"></i></button>
+                  <div class="dropdown-menu">
+                    <button id="en" data-key="language-en">EN</button>
+                    <button id="ka" data-key="language-ka">KA</button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="category-buttons">
-                <div class="dropdown">
-                    <button><i class="fa-solid fa-icons"></i>Category</button>
-                    <div class="dropdown-menu">
-                        <a href="/about/about.html">about</a>
-                        <a href="/contact/contact.html">contact</a>
-                        <a href="/music/music.html">Music/Concerts</a>
-                    </div>
+              <div class="dropdown">
+                <button data-key="category-button"><i class="fa-solid fa-icons"></i>Category</button>
+                <div class="dropdown-menu">
+                  <a href="/about/about.html" data-key="about">about</a>
+                  <a href="/contact/contact.html" data-key="contact-link">contact</a>
+                  <a href="/music/music.html" data-key="music-link">Music/Concerts</a>
                 </div>
-                <button><i class="fa-solid fa-ticket-simple"></i><a href="/about/about.html">about</a></button>
-                <button><i class="fa-solid fa-music"></i><a href="/contact/contact.html">contact</a></button>
-                <button><i class="fa-solid fa-train"></i><a href="/music/music.html">Music/Concerts</a></button>
+              </div>
+              <button><i class="fa-solid fa-ticket-simple"></i><a href="/about/about.html" data-key="about">about</a></button>
+              <button><i class="fa-solid fa-music"></i><a href="/contact/contact.html" data-key="contact-link">contact</a></button>
+              <button><i class="fa-solid fa-train"></i><a href="/music/music.html" data-key="music-link">Music/Concerts</a></button>
             </div>
         </header>
     
-        <h1 class="section-title">Music/Concert</h1>
+        <h1 class="section-title" data-key="music-link">Music/Concert</h1>
         <div class="button-container">
             <div class="filter-buttons">
-                <button id="btn-today">Today</button>
-                <button id="btn-tomorrow">Tomorrow</button>
-                <button id="btn-weekend">Weekend</button>
+                <button id="btn-today" data-key="Today">Today</button>
+                <button id="btn-tomorrow" data-key="Tomorrow">Tomorrow</button>
+                <button id="btn-weekend" data-key="Weekend">Weekend</button>
             </div>
             <div class="date-picker-container">
                 <input type="date" id="date-picker">
@@ -140,11 +136,11 @@
         <div class="grid" id="grid">
             <div class="grid-item" data-id="1" data-date="2025-02-20">
                 <img src="https://static.tkt.ge/img/e69e93d3-85de-4f46-8b7f-e39283c8622f.jpeg" alt="Event">
-                <div class="date-label" data-key="">Feb 20</div>
-                <div class="price-label" data-key="">from $80</div>
+                <div class="date-label" data-key="Feb 20">Feb 20</div>
+                <div class="price-label" data-key="from-80$">from $80</div>
                 <div class="content">
-                    <div class="title" data-key="">456 Fusion x Glitz Community</div>
-                    <div class="description" data-key="">Terrace Orbeliani</div>
+                    <div class="title" data-key="456_fusion_x_glitz_community">456 Fusion x Glitz Community</div>
+                    <div class="description" data-key="Terrace_Orbeliani">Terrace Orbeliani</div>
                 </div>
             </div>
 
@@ -170,21 +166,21 @@
 
             <div class="grid-item" data-id="4" data-date="2025-03-25">
                 <img src="https://static.tkt.ge/img/f85e44d1-adc0-4b42-9d68-db6d4cbcb83b.jpeg" alt="Event">
-                <div class="date-label">Mar 25</div>
-                <div class="price-label">from $20</div>
+                <div class="date-label" data-key="date-mar-25">Mar 25</div>
+                <div class="price-label" data-key="btn-price-20">from $20</div>
                 <div class="content">
-                    <div class="title">House of Disco Vol 4</div>
-                    <div class="description">Weather Report Sky Bar</div>
+                    <div class="title" data-key="title-disco-vol-4">House of Disco Vol 4</div>
+                    <div class="description" data-key="desc-weather-report">Weather Report Sky Bar</div>
                 </div>
             </div>
 
             <div class="grid-item" data-id="5" data-date="2025-04-05">
                 <img src="https://static.tkt.ge/img/4e164149-8dff-4c9d-9139-294ffc78cc12.jpeg" alt="Event">
-                <div class="date-label" data-key="">Apr 05</div>
-                <div class="price-label" data-key="">from $39</div>
+                <div class="date-label" data-key="date-apr-05">Apr 05</div>
+                <div class="price-label" data-key="btn-price-39">from $39</div>
                 <div class="content" >
-                    <div class="title" data-key="">Gunflower at Botanico</div>
-                    <div class="description" data-key="">Botanico Tbilisi</div>
+                    <div class="title" data-key="title-gunflower">Gunflower at Botanico</div>
+                    <div class="description" data-key="desc-botanico">Botanico Tbilisi</div>
                 </div>
             </div>
 
@@ -197,26 +193,6 @@
                     <div class="description" data-key="placeofritual">Palace of Rituals</div>
                 </div>
             </div>
-
-            <div class="grid-item" data-id="7" data-date="2025-04-15">
-                <img src="https://via.placeholder.com/300x180" alt="Placeholder Event">
-                <div class="date-label" data-key="">Apr 15</div>
-                <div class="price-label" data-key="">from $45</div>
-                <div class="content">
-                    <div class="title" data-key="">Placeholder Event Title 2</div>
-                    <div class="description" data-key="">Placeholder Venue</div>
-                </div>
-            </div>
-
-            <div class="grid-item" data-id="8" data-date="2025-04-20">
-                <img src="https://via.placeholder.com/300x180" alt="Placeholder Event">
-                <div class="date-label" data-key="">Apr 20</div>
-                <div class="price-label" data-key="">from $30</div>
-                <div class="content">
-                    <div class="title" data-key="">Placeholder Event Title 3</div>
-                    <div class="description" data-key="">Placeholder Venue</div>
-                </div>
-            </div>
             
             
         </div>
@@ -224,79 +200,79 @@
         <footer>
             <div class="footer-sections">
                 <div class="footer-column">
-                    <h4>CATEGORIES</h4>
+                    <h4 data-key="categories-header">CATEGORIES</h4>
                     <ul>
-                        <li>Music / Concert</li>
-                        <li>Theatre</li>
-                        <li>Opera</li>
-                        <li>Sport</li>
-                        <li>International</li>
-                        <li>Omnibus</li>
-                        <li>Festival</li>
-                        <li>Kids</li>
-                        <li>Conference</li>
-                        <li>Stand Up</li>
-                        <li>Tourism</li>
-                        <li>Hobby</li>
-                        <li>Masterclass</li>
-                        <li>Museum</li>
-                        <li>Sea</li>
+                        <li data-key="category-music-concert">Music / Concert</li>
+                        <li data-key="category-theatre">Theatre</li>
+                        <li data-key="category-opera">Opera</li>
+                        <li data-key="category-sport">Sport</li>
+                        <li data-key="category-international">International</li>
+                        <li data-key="category-omnibus">Omnibus</li>
+                        <li data-key="category-festival">Festival</li>
+                        <li data-key="category-kids">Kids</li>
+                        <li data-key="category-conference">Conference</li>
+                        <li data-key="category-stand-up">Stand Up</li>
+                        <li data-key="category-tourism">Tourism</li>
+                        <li data-key="category-hobby">Hobby</li>
+                        <li data-key="category-masterclass">Masterclass</li>
+                        <li data-key="category-museum">Museum</li>
+                        <li data-key="category-sea">Sea</li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>HELP</h4>
+                    <h4 data-key="help-header">HELP</h4>
                     <ul>
-                        <li>Online Help</li>
-                        <li>Anonymous Hotline</li>
-                        <li>Feedback</li>
-                        <li>For Organizations</li>
-                        <li>FAQ</li>
-                        <li>+995 32 2195577</li>
-                        <li>support@tkt.ge</li>
+                        <li data-key="help-online">Online Help</li>
+                        <li data-key="help-hotline">Anonymous Hotline</li>
+                        <li data-key="help-feedback">Feedback</li>
+                        <li data-key="help-organizations">For Organizations</li>
+                        <li data-key="help-faq">FAQ</li>
+                        <li data-key="help-phone">+995 32 2195577</li>
+                        <li data-key="help-email">support@tkt.ge</li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>MOVIES</h4>
+                    <h4 data-key="movies-header">MOVIES</h4>
                     <ul>
-                        <li>Amirani Cinema</li>
-                        <li>Cavea Grand Mall Batumi</li>
-                        <li>Cavea Tbilisi Mall</li>
-                        <li>Cavea East Point</li>
-                        <li>Cavea Galleria</li>
-                        <li>Cavea City Mall</li>
-                        <li>Iveria Khashuri</li>
+                        <li data-key="movie-amirani">Amirani Cinema</li>
+                        <li data-key="movie-batumi">Cavea Grand Mall Batumi</li>
+                        <li data-key="movie-tbilisi-mall">Cavea Tbilisi Mall</li>
+                        <li data-key="movie-east-point">Cavea East Point</li>
+                        <li data-key="movie-galleria">Cavea Galleria</li>
+                        <li data-key="movie-city-mall">Cavea City Mall</li>
+                        <li data-key="movie-khashuri">Iveria Khashuri</li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>RAILWAY</h4>
+                    <h4 data-key="railway-header">RAILWAY</h4>
                     <ul>
-                        <li>Tbilisi - Batumi</li>
-                        <li>Tbilisi - Poti</li>
-                        <li>Tbilisi - Kutaisi</li>
-                        <li>Tbilisi - Ureki</li>
-                        <li>Tbilisi - Ozurgeti</li>
+                        <li data-key="railway-tbilisi-batumi">Tbilisi - Batumi</li>
+                        <li data-key="railway-tbilisi-poti">Tbilisi - Poti</li>
+                        <li data-key="railway-tbilisi-kutaisi">Tbilisi - Kutaisi</li>
+                        <li data-key="railway-tbilisi-ureki">Tbilisi - Ureki</li>
+                        <li data-key="railway-tbilisi-ozurgeti">Tbilisi - Ozurgeti</li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>FLY</h4>
+                    <h4 data-key="fly-header">FLY</h4>
                     <ul>
-                        <li>Airlines</li>
-                        <li>Tbilisi - Istanbul</li>
-                        <li>Tbilisi - Berlin</li>
-                        <li>Tbilisi - Paris</li>
-                        <li>Tbilisi - Barcelona</li>
-                        <li>Tbilisi - Baku</li>
-                        <li>Explanatory Dictionary</li>
+                        <li data-key="fly-airlines">Airlines</li>
+                        <li data-key="fly-tbilisi-istanbul">Tbilisi - Istanbul</li>
+                        <li data-key="fly-tbilisi-berlin">Tbilisi - Berlin</li>
+                        <li data-key="fly-tbilisi-paris">Tbilisi - Paris</li>
+                        <li data-key="fly-tbilisi-barcelona">Tbilisi - Barcelona</li>
+                        <li data-key="fly-tbilisi-baku">Tbilisi - Baku</li>
+                        <li data-key="fly-dictionary">Explanatory Dictionary</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="links">
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
-                    <a href="#">Environmental Policy</a>
-                    <a href="#">TKT Club Membership</a>
+                    <a href="#" data-key="footer-link-terms">Terms & Conditions</a>
+                    <a href="#" data-key="footer-link-privacy">Privacy Policy</a>
+                    <a href="#" data-key="footer-link-cookies">Cookie Policy</a>
+                    <a href="#" data-key="footer-link-environment">Environmental Policy</a>
+                    <a href="#" data-key="footer-link-club">TKT Club Membership</a>
                 </div>
                 <div class="partners">
                     <img src="tnet-logo.png" alt="TNET">

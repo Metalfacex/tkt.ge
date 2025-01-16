@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll("[data-key]").forEach(element => {
             const key = element.getAttribute("data-key");
             if (translations[lang][key]) {
-                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA" || element.tagName ==="BUTTON") {
+                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
                     element.placeholder = translations[lang][key];
                 } else {
                     element.textContent = translations[lang][key];
@@ -384,12 +384,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
 // Add click event for redirecting to event page
-  const grid = document.getElementById('grid');
-  const items = grid.querySelectorAll('.popular-box');
-  items.forEach(item => {
-      item.addEventListener('click', () => {
-          const eventId = item.getAttribute('data-id');
-          window.location.href = `../event/event.html?id=${eventId}`;
+  const grids = document.querySelectorAll('#grid'); // Select both grids (popular-section and datepopularcomb)
+
+  grids.forEach(grid => {
+      const items = grid.querySelectorAll('.popular-box, .alt-popular-box'); // Include elements from both grids
+      items.forEach(item => {
+          item.addEventListener('click', () => {
+              const eventId = item.getAttribute('data-id');
+              window.location.href = `../event/event.html?id=${eventId}`;
+          });
       });
   });
+
 });

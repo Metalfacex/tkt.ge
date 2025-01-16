@@ -48,6 +48,15 @@ header {
     gap: 15px;
 }
 
+.right-section button{
+    width: 30px;
+    height: 30px;
+    color: #007bff;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
 .logo img {
     height: 50px;
     width: 125px;

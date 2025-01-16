@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
     const grid = document.getElementById('grid');
     const todayBtn = document.getElementById('btn-today');
     const tomorrowBtn = document.getElementById('btn-tomorrow');
@@ -51,7 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
         filterGrid(e.target.value);
     });
 
-    // Add click event for redirecting to event page
+    fetch("../lang.json")
+    .then(response => response.json())
+    .then(translations => {
+      
+        document.getElementById("en").addEventListener("click", () => switchLanguage("en", translations));
+        document.getElementById("ka").addEventListener("click", () => switchLanguage("ka", translations));
+    });
+
+function switchLanguage(lang, translations) {
+  document.querySelectorAll("[data-key]").forEach(element => {
+        const key = element.getAttribute("data-key");
+        if (translations[lang][key]) {
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+  }
+
     const items = grid.querySelectorAll('.grid-item');
     items.forEach(item => {
         item.addEventListener('click', () => {

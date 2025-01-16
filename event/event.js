@@ -44,9 +44,8 @@ const events = [
         title: "OLD NEW YEAR",
         date: "January 5, 2025",
         description: "Palace of Rituals.",
-        price: "from-100$",
+        price: "From $100",
         banner: "https://static.tkt.ge/img/008cd01e-b0c0-4594-977b-2e231e03a6f0.jpeg"
-
     }
 ];
 
@@ -58,12 +57,45 @@ const eventId = urlParams.get("id");
 const event = events.find(e => e.id === eventId);
 
 // Populate the page with event data
-if (event) {
-    document.getElementById("banner").style.backgroundImage = `url(${event.banner})`;
-    document.getElementById("title").textContent = event.title;
-    document.getElementById("date").textContent = event.date;
-    document.getElementById("description").textContent = event.description;
-    document.getElementById("price").textContent = event.price;
+const selectedEvent = events.find(e => e.id === eventId);
+
+if (selectedEvent) {
+    document.getElementById("banner").style.backgroundImage = `url(${selectedEvent.banner})`;
+    document.getElementById("title").setAttribute("data-key", `event_title_${selectedEvent.id}`);
+    document.getElementById("date").setAttribute("data-key", `event_date_${selectedEvent.id}`);
+    document.getElementById("description").setAttribute("data-key", `event_description_${selectedEvent.id}`);
+    document.getElementById("price").setAttribute("data-key", `event_price_${selectedEvent.id}`);
+
+    document.getElementById("title").textContent = selectedEvent.title;
+    document.getElementById("date").textContent = selectedEvent.date;
+    document.getElementById("description").textContent = selectedEvent.description;
+    document.getElementById("price").textContent = selectedEvent.price;
 } else {
     document.querySelector(".container").innerHTML = "<p>Event not found. Please go back to the events page.</p>";
 }
+
+// Language switching
+document.addEventListener('DOMContentLoaded', () => {
+    fetch("../lang.json")
+        .then(response => response.json())
+        .then(translations => {
+            document.getElementById("en").addEventListener("click", () => switchLanguage("en", translations));
+            document.getElementById("ka").addEventListener("click", () => switchLanguage("ka", translations));
+
+            // Default language
+            switchLanguage("en", translations);
+        });
+
+    function switchLanguage(lang, translations) {
+        document.querySelectorAll("[data-key]").forEach(element => {
+            const key = element.getAttribute("data-key");
+            if (translations[lang][key]) {
+                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+    }
+});
