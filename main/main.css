@@ -33,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .left-section {
@@ -83,7 +83,7 @@ header {
 .category-buttons {
     display: flex;
     margin-top: 10px;
-    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .category-buttons button {
@@ -132,35 +132,35 @@ header {
 /* Responsive styles */
 @media (max-width: 768px) {
     .top-nav {
-        flex-direction: column; /* Stacks items vertically */
+        flex-direction: column;
         align-items: flex-start;
     }
 
     .left-section {
-        flex-direction: column; /* Stacks logo and search bar */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 10px;
     }
 
     .search-bar input {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%; 
     }
 
     .right-section {
         flex-direction: row;
         justify-content: flex-start;
         gap: 10px;
-        margin-top: 10px; /* Adds spacing below */
+        margin-top: 10px; 
     }
 
     .category-buttons {
-        justify-content: center; /* Center-align buttons */
-        gap: 10px; /* Adds spacing between buttons */
+        justify-content: center; 
+        gap: 10px; 
         margin-top: 15px;
     }
 
     .category-buttons button {
-        width: auto; /* Let buttons adjust width based on content */
+        width: auto; 
     }
 }
 
@@ -209,7 +209,7 @@ header {
     font-size: 12px;
     margin-top: -10px;
     margin-bottom: 10px;
-    color: #333; /* Default color */
+    color: #333;
   }
 
   .password-strength.weak {
@@ -233,7 +233,7 @@ header {
     font-family: Arial, sans-serif;
 }
 
-  /* Header section */
+  
   .namex {
     display: flex;
     justify-content: space-between;
@@ -254,7 +254,7 @@ header {
     cursor: pointer;
   }
 
-  /* Facebook button */
+ 
   .facebook-btn {
     background-color: #1877f2;
     color: white;
@@ -274,14 +274,14 @@ header {
     background-color: #145db8;
   }
 
-  /* Divider */
+  
   .divider {
     color: #aaa;
     font-size: 14px;
     margin: 15px 0;
   }
 
-  /* Inputs */
+  
   input {
     width: 100%;
     padding: 10px;
@@ -309,7 +309,7 @@ header {
     text-align: left;
   }
 
-  /* Password container */
+  
   .password-container {
     position: relative;
   }
@@ -328,7 +328,7 @@ header {
     color: #aaa;
   }
 
-  /* Links */
+ 
   .links {
     display: flex;
     justify-content: space-between;
@@ -345,7 +345,7 @@ header {
     text-decoration: underline;
   }
 
-  /* Login button */
+ 
   .login-btn {
     background-color: #007bff;
     color: white;
@@ -362,7 +362,7 @@ header {
     background-color: #0056b3;
   }
 
-  /* No username text */
+  
   .no-username {
     margin-top: 15px;
     font-size: 13px;
@@ -424,15 +424,15 @@ header {
 .circle-row {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Ensures items wrap to the next row on smaller screens */
+    flex-wrap: wrap; 
     margin-top: 20px;
 }
 
 .circle {
     text-align: center;
-    margin: 10px; /* Adjusted margin for better spacing on smaller screens */
-    flex: 1 1 120px; /* Allows circles to shrink and grow while maintaining a minimum width */
-    max-width: 150px; /* Limits the maximum size */
+    margin: 10px; 
+    flex: 1 1 120px; 
+    max-width: 150px; 
 }
 
 .circle img {
@@ -453,26 +453,26 @@ header {
     color: #333;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
     .circle {
-        flex: 1 1 100px; /* Adjusts the minimum size on smaller devices */
+        flex: 1 1 100px; 
     }
 
     .circle img {
-        width: 60px; /* Reduces image size */
+        width: 60px; 
         height: 60px;
     }
 
     .circle p {
-        font-size: 12px; /* Reduces font size for better fit */
+        font-size: 12px; 
     }
 }
 
-/* Media query for extra small screens */
+
 @media (max-width: 480px) {
     .circle-row {
-        justify-content: center; /* Centers items on very small screens */
+        justify-content: center;
     }
 
     .circle img {
@@ -808,7 +808,7 @@ footer {
 }
 
 .footer-column {
-    flex: 1 1 200px; /* Ensures each column takes at least 200px */
+    flex: 1 1 200px; 
     margin-right: 20px;
     margin-bottom: 20px;
 }

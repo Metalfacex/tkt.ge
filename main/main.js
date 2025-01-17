@@ -1,10 +1,4 @@
 
-
-
-
-// login
-
-
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("email-error");
 const passwordInput = document.getElementById("password");
@@ -12,7 +6,7 @@ const passwordError = document.getElementById("password-error");
 const togglePassword = document.getElementById("toggle-password");
 const loginButton = document.getElementById("login-btn");
 
-// Email validation
+// Emailis validacia
 emailInput.addEventListener("input", () => {
   const emailValue = emailInput.value;
   if (!emailValue.includes("@")) {
@@ -24,7 +18,7 @@ emailInput.addEventListener("input", () => {
   }
 });
 
-// Password validation
+// Passwordis validacia
 passwordInput.addEventListener("input", () => {
   const passwordValue = passwordInput.value;
   if (passwordValue.length < 8) {
@@ -36,7 +30,7 @@ passwordInput.addEventListener("input", () => {
   }
 });
 
-// Toggle password visibility
+// parolis danaxxva
 togglePassword.addEventListener("click", () => {
   const icon = togglePassword.querySelector("i");
   if (passwordInput.type === "password") {
@@ -52,7 +46,7 @@ togglePassword.addEventListener("click", () => {
 
 // Login button validation
 loginButton.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent form submission (if inside a form)
+  e.preventDefault();
   const emailValue = emailInput.value;
   const passwordValue = passwordInput.value;
 
@@ -66,7 +60,7 @@ loginButton.addEventListener("click", (e) => {
     return;
   }
 
-  // If both validations pass
+
   alert("Logged in");
 });
 document.getElementById("register-password").addEventListener("input", function () {
@@ -74,7 +68,6 @@ document.getElementById("register-password").addEventListener("input", function 
     const passwordStrength = document.getElementById("password-strength");
   
     if (!password) {
-      // Empty password case
       passwordStrength.textContent = "";
       passwordStrength.className = "password-strength";
     } else if (/^[a-zA-Z]+$/.test(password)) {
@@ -286,8 +279,6 @@ function generateDates(start, end) {
             <div class="date-weekday">${weekDay}</div>
         `;
         dateSlider.appendChild(dateDiv);
-
-        // Increment by 1 day
         currentDate.setDate(currentDate.getDate() + 1);
     }
 }
@@ -384,10 +375,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
 // Add click event for redirecting to event page
-  const grids = document.querySelectorAll('#grid'); // Select both grids (popular-section and datepopularcomb)
+  const grids = document.querySelectorAll('#grid');
 
   grids.forEach(grid => {
-      const items = grid.querySelectorAll('.popular-box, .alt-popular-box'); // Include elements from both grids
+      const items = grid.querySelectorAll('.popular-box, .alt-popular-box'); 
       items.forEach(item => {
           item.addEventListener('click', () => {
               const eventId = item.getAttribute('data-id');

@@ -74,7 +74,7 @@ if (selectedEvent) {
     document.querySelector(".container").innerHTML = "<p>Event not found. Please go back to the events page.</p>";
 }
 
-// Language switching
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch("../lang.json")
         .then(response => response.json())
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("en").addEventListener("click", () => switchLanguage("en", translations));
             document.getElementById("ka").addEventListener("click", () => switchLanguage("ka", translations));
 
-            // Default language
+
             switchLanguage("en", translations);
         });
 
